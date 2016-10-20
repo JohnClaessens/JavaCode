@@ -9,7 +9,7 @@
  
 import java.util.*;
 
-public class evenTest {
+public class EvenTest {
 	
 	public static void main(String [] args){
 
@@ -27,6 +27,6 @@ public class evenTest {
 
 //Display result
 		System.out.println("Is the number " + userNum + " even? " + isEven);
-	}	
+	}//End of Main	Method
 
-}
+}//End of EvenTest class
