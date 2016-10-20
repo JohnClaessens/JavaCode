@@ -7,7 +7,7 @@
  * Some of the code in this program may be similiar to code found in Introduction to Java Programming by Y. Daniel Liang
  * Some code is copied from blackboard provided by Professor Darrell Payne
  */
-public class iteration {
+public class Iteration {
 	
 	public static void main(String[] args) {
 		
@@ -30,4 +30,4 @@ public class iteration {
 			System.out.println();
 		}
 	}//End of Main
-}//End of iteration class
+}//End of Iteration class
