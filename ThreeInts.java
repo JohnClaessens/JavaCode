@@ -9,7 +9,7 @@
  
 import java.util.*;
 
-public class threeInts {
+public class ThreeInts {
 	
 	public static void main(String [] args){
 
@@ -51,6 +51,6 @@ public class threeInts {
 	//Display integers sorted so that value1 <= value2 <= value3.
 		System.out.println("Order  Sorted: " + value1 + " <= " + value2 + " <= " + value3);
 		
-	}	
+	}//End of Main Method	
 
-}
+}//End of ThreeInts class
