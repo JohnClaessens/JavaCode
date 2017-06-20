@@ -1,3 +1,8 @@
+//  John Claessens
+//  Assignment 1.1
+//  Bellevue University
+//  20 June 2017
+
 import javax.swing.*;
 
 public class Dollars {
