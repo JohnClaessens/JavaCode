@@ -31,8 +31,8 @@ public class Dollars {
         intOne = intInput /1;
         intInput = intInput % 1;
     }
-    System.out.println("\nYou entered the dollar amount: $" + userInput);
-    System.out.println("Currency breakdown is:\n\n\t" + intHundred + "\tHundreds\n\t" + intFifty + "\tFifties\n\t" + intTwenty + "\tTwenties\n\t" + intTen + "\tTens\n\t" + intFive + "\tFives\n\t" + intOne + "\tOnes\n\t");
+    JOptionPane.showMessageDialog(null,"You entered the dollar amount: $" + userInput);
+    JOptionPane.showMessageDialog(null,"Currency breakdown is:\n\n" + intHundred + "    Hundreds\n" + intFifty + "    Fifties\n" + intTwenty + "    Twenties\n" + intTen + "    Tens\n" + intFive + "    Fives\n" + intOne + "    Ones\n");
 
     System.exit(0);
   }
