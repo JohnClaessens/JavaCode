@@ -1,5 +1,5 @@
 //  John Claessens
-//  Assignment 2.1
+//  Assignment 2.2
 //  Bellevue University
 //  24 June 2017
 
@@ -15,7 +15,7 @@ public class Exponent{
             double numCalculated;            
             
             //get user to enter a double value
-            userInput = JOptionPane.showInputDialog(null, "Please enter a number to square:"); 
+            userInput = JOptionPane.showInputDialog(null, "Please enter a number to calclate:"); 
             //convert the string input to a double
             numToCalculate = Double.parseDouble(userInput);
             
@@ -40,8 +40,6 @@ public class Exponent{
         
         public double squareValue(double param1){
             //take the value passed into the method and calculate the square value and return
-            //param1 = param1 * param1;
-            //this can also be done using the Math.pow method
             param1 = Math.pow(param1,2);
             return param1;     
         }//End of squareValue
