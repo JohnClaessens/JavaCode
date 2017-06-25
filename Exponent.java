@@ -1,5 +1,5 @@
 //  John Claessens
-//  Assignment 2.2
+//  Assignment 2.1
 //  Bellevue University
 //  24 June 2017
 
