@@ -22,9 +22,9 @@ public class CollegeStudent{
     */
     //constructor
     public CollegeStudent(String firstName, String lastName, GregorianCalendar enrollmentDate){
-        firstName = firstName;
-        lastName = lastName;
-        enrollmentDate = enrollmentDate;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.enrollmentDate = enrollmentDate;
         projectedGradDate = new GregorianCalendar(
                                 enrollmentDate.get(enrollmentDate.YEAR),
                                 enrollmentDate.get(enrollmentDate.MONTH),
