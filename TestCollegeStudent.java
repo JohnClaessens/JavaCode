@@ -10,7 +10,14 @@ import java.util.*;
 
 public class TestCollegeStudent{
     
-    public static void main(String [] args){           
+    public static void main(String [] args){  
+        int numStudents = 0;
+        String count= "";
+        
+        count = JOptionPane.showInputDialog(null, "Please enter a number of students");
+        numStudents = Integer.parseInt(count);
+        
+        while (numStudents > 0){
             
         JTextField field1 = new JTextField();
         JTextField field2 = new JTextField();
@@ -43,12 +50,11 @@ public class TestCollegeStudent{
         
         //System.out.println(firstName + " " + lastName + " " + enrollmentDay + "/" + enrollmentMonth + "/" + enrollmentYear);            
         CollegeStudent student = new CollegeStudent(firstName,lastName,enrollmentDate);  
-        //student.setFirstName(firstName);
-        //student.setLastName(lastName);
-        //student.setEnrollmentDate(enrollmentDate);
         
-        System.out.println("First name: " + student.firstName + "\nLast Name: " + student.lastName + "\nEnrollment Date: " + enrollmentDate.get(GregorianCalendar.DAY_OF_MONTH) + "/" + enrollmentDate.get(GregorianCalendar.MONTH) + "/" + enrollmentDate.get(GregorianCalendar.YEAR) + "\nGraduation Date: " + student.projectedGradDate.get(GregorianCalendar.DAY_OF_MONTH) + "/" + student.projectedGradDate.get(GregorianCalendar.MONTH) + "/" + student.projectedGradDate.get(GregorianCalendar.YEAR));
         
+        JOptionPane.showMessageDialog(null,"First name: " + student.firstName + "\nLast Name: " + student.lastName + "\nEnrollment Date: " + enrollmentDate.get(GregorianCalendar.DAY_OF_MONTH) + "/" + enrollmentDate.get(GregorianCalendar.MONTH) + "/" + enrollmentDate.get(GregorianCalendar.YEAR) + "\nGraduation Date: " + student.projectedGradDate.get(GregorianCalendar.DAY_OF_MONTH) + "/" + student.projectedGradDate.get(GregorianCalendar.MONTH) + "/" + student.projectedGradDate.get(GregorianCalendar.YEAR));
+        numStudents --;
+        }
         //exit the program
         System.exit(0);
     }//End of Main
