@@ -4,6 +4,7 @@
 //  Bellevue University
 //  25 June 2017
 
+import javax.swing.*;
 import java.util.*;
 
 public class CollegeStudent{
@@ -55,5 +56,6 @@ public class CollegeStudent{
     public void setEnrollmentDate(GregorianCalendar enrollmentDate){
         enrollmentDate = enrollmentDate;
     }
+    
     
 }//End of CollegeStudent class
