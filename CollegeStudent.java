@@ -4,7 +4,6 @@
 //  Bellevue University
 //  25 June 2017
 
-import javax.swing.*;
 import java.util.*;
 
 public class CollegeStudent{
@@ -14,12 +13,7 @@ public class CollegeStudent{
     public String lastName;
     public GregorianCalendar enrollmentDate;
     public GregorianCalendar projectedGradDate;
-    
-    /*= new GregorianCalendar(
-            enrollmentDate.get(enrollmentDate.YEAR),
-            enrollmentDate.get(enrollmentDate.MONTH),
-            enrollmentDate.get(enrollmentDate.DAY_OF_MONTH));
-    */
+   
     //constructor
     public CollegeStudent(String firstName, String lastName, GregorianCalendar enrollmentDate){
         this.firstName = firstName;
