@@ -67,7 +67,7 @@ public class TestCollegeStudent{
         //display the information in a dialog box after the data is passed to the constructor
         JOptionPane.showMessageDialog(null,"First name: " + student.firstName + "\nLast Name: " + student.lastName + "\nEnrollment Date: " + student.enrollmentDate.get(GregorianCalendar.DAY_OF_MONTH) + "/" + student.enrollmentDate.get(GregorianCalendar.MONTH) + "/" + student.enrollmentDate.get(GregorianCalendar.YEAR) + "\nGraduation Date: " + student.projectedGradDate.get(GregorianCalendar.DAY_OF_MONTH) + "/" + student.projectedGradDate.get(GregorianCalendar.MONTH) + "/" + student.projectedGradDate.get(GregorianCalendar.YEAR));
         
-        //decrement the numstudents variable for the loop
+        //decrement the numStudents variable for the loop
         numStudents --;
         }
         
