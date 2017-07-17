@@ -6,8 +6,6 @@
 /*  Create a class titled SchoolTextBook that contains fields for the author, title, page count, ISBN, and price. This SchoolTextBook class will also provide setter and getter methods for all fields. Save this class in a file titled SchoolTextBook.java.
 */
 
-import javax.swing.JOptionPane;
-
 public class SchoolTextBook {  
     
     private String strAuthor, strTitle, strISBN;
