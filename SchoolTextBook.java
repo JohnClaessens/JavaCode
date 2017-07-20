@@ -5,13 +5,16 @@
 //  16 July 2017
 /*  Create a class titled SchoolTextBook that contains fields for the author, title, page count, ISBN, and price. This SchoolTextBook class will also provide setter and getter methods for all fields. Save this class in a file titled SchoolTextBook.java.
 */
+//import java.util.Comparator;  -- this path may have been right, but I didn't know enough on how to do it
 
-public class SchoolTextBook {  
+public class SchoolTextBook{  
     
+    //Declare Variables
     private String strAuthor, strTitle, strISBN;
-    private int intPageCount;
+    private int intPageCount; 
     private double dblPrice;
     
+    //Constructor
     public SchoolTextBook(String author, String title, String ISBN, int pageCount, double price){
         this.strAuthor = author;
         this.strTitle = title;
@@ -20,13 +23,17 @@ public class SchoolTextBook {
         this.dblPrice = price;
     }
     
+    public SchoolTextBook(){
+        
+    }
+    
     //getters and setters
     public String getAuthor(){
         return strAuthor;
     }
     
     public void setAuthor(String author){
-        strAuthor = author;
+        this.strAuthor = author;
     }
     
     public String getTitle(){
@@ -34,7 +41,7 @@ public class SchoolTextBook {
     }
     
     public void setTitle(String title){
-        strTitle = title;
+        this.strTitle = title;
     }
     
     public String getISBN(){
@@ -42,7 +49,7 @@ public class SchoolTextBook {
     }
     
     public void setISBN(String ISBN){
-        strISBN = ISBN;
+        this.strISBN = ISBN;
     }
     
     public int getPageCount(){
@@ -50,7 +57,7 @@ public class SchoolTextBook {
     }
     
     public void setPageCount(int pageCount){
-        intPageCount = pageCount;
+        this.intPageCount = pageCount;
     }
     
     public double getPrice(){
@@ -58,7 +65,7 @@ public class SchoolTextBook {
     }
     
     public void setPrice(double price){
-        dblPrice = price;
+        this.dblPrice = price;
     }
-  
+   
 }//end of SchoolTextBook class
