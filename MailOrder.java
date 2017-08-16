@@ -23,7 +23,8 @@ public class MailOrder {
         String delimiter = "\t\t";
         String strItemNumber = "0";
         String strQuantity;
-        String strOutput;        
+        String strOutput;
+        int i;        
         
         //Create the file if it doesn't exist
         File file = new File("C:\\Temp\\MailOrder.txt");
@@ -79,14 +80,20 @@ public class MailOrder {
         catch (Exception e) { 
                     System.out.println("Errors: " + e);
                 }
+                
         try{
-        FileReader fr=new FileReader("C:\\Temp\\MailOrder.txt");    
-        int i;  
+        //Create FileReader
+        FileReader fr = new FileReader("C:\\Temp\\MailOrder.txt");
+        
+        //Display content of the file to the console
         System.out.println("\n  Items in the list:");
         System.out.println("\nItem #\t\tQuantity");
-        while((i=fr.read())!=-1)   
-            System.out.print((char)i);    
         
+        //loop through the file
+        while((i=fr.read())!=-1)   
+            System.out.print((char)i);
+        
+        //Close the FileReader
         fr.close();
         }
         catch (Exception e) { 
