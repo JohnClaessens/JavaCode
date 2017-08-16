@@ -28,7 +28,7 @@ public class MailOrder {
         
         //Create the file if it doesn't exist
         File file = new File("C:\\Temp\\MailOrder.txt");
-            
+        String absolutePath = file.getAbsolutePath();
             try { 
                 if (!file.exists()){//create directory
                     if(file.getParentFile().mkdir()){ 
@@ -83,7 +83,7 @@ public class MailOrder {
                 
         try{
         //Create FileReader
-        FileReader fr = new FileReader("C:\\Temp\\MailOrder.txt");
+        FileReader fr = new FileReader(absolutePath);
         
         //Display content of the file to the console
         System.out.println("\n  Items in the list:");
