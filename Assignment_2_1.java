@@ -40,7 +40,7 @@ public class Assignment_2_1 extends JFrame{
     private JTextField textFieldZip=new JTextField();
     
     int arrayPointer = 1;
-    int arrayPointerLast = 1;
+    int lastRecord;
 
     public Assignment_2_1(String title){
 
@@ -99,8 +99,8 @@ public class Assignment_2_1 extends JFrame{
 
                 if(arrayPointer > 1){
                 --arrayPointer;
-                }else if (arrayPointer == 1){//Else if to handle when reaching the beginning of the array
-                    arrayPointer = arrayPointerLast;
+                }else if (arrayPointer == 1){//Else if to handle when reaching the beginning of the RecordSet
+                    arrayPointer = lastRecord;
                 }
 
                 setFields(arrayPointer);
@@ -111,9 +111,9 @@ public class Assignment_2_1 extends JFrame{
 
             public void actionPerformed(java.awt.event.ActionEvent evt) {
             
-                if(arrayPointer < arrayPointerLast){
+                if(arrayPointer < lastRecord){
                     ++arrayPointer;
-                }else if (arrayPointer == arrayPointerLast){//Else if to handle when reaching the end of the array
+                }else if (arrayPointer == lastRecord){//Else if to handle when reaching the end of the RecordSet
                     arrayPointer = 1;
                 }
 
@@ -124,7 +124,7 @@ public class Assignment_2_1 extends JFrame{
         buttonReset.addActionListener(new java.awt.event.ActionListener() {
 
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                //Resets to the beginning of the Array
+                //Resets to the first record of the RecordSet
                 arrayPointer = 1;
                 setFields(arrayPointer);
             }
@@ -141,9 +141,15 @@ public class Assignment_2_1 extends JFrame{
         // Execute a SELECT statement
         Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
         ResultSet rs = stmt.executeQuery("SELECT * FROM ADDRESS");
+        
+        //assigning a value to the lastRecord so we know the end of the database records
         rs.last();
-        arrayPointerLast = rs.getRow();
+        lastRecord = rs.getRow();
+        
+        //moving to the appropriate position inthe database 
         rs.absolute(position);
+        
+        //populating text fields
         textFieldName.setText(rs.getString("FIRSTNAME") + " " + rs.getString("LASTNAME"));
         textFieldAddress.setText(rs.getString("STREET"));
         textFieldCity.setText(rs.getString("CITY"));
